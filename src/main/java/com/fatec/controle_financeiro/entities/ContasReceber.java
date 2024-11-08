@@ -5,8 +5,8 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "contas_pagar")
-public class ContasPagar {
+@Table(name = "contas_receber")
+public class ContasReceber {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,8 +19,8 @@ public class ContasPagar {
     private LocalDate vencimento;
 
     @ManyToOne
-    @JoinColumn(name = "fornecedor_id")
-    private Fornecedor fornecedor;
+    @JoinColumn(name = "cliente_id")
+    private Cliente cliente;
 
     @Column(name = "valor", precision = 12, scale = 2)
     private BigDecimal valor;
@@ -50,12 +50,12 @@ public class ContasPagar {
         this.vencimento = vencimento;
     }
 
-    public Fornecedor getFornecedor() {
-        return fornecedor;
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setFornecedor(Fornecedor fornecedor) {
-        this.fornecedor = fornecedor;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     public BigDecimal getValor() {
