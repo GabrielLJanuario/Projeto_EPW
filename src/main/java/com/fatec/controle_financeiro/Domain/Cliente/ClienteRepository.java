@@ -1,6 +1,8 @@
-package com.fatec.controle_financeiro.Domain.Cliente;
+package com.fatec.controle_financeiro.domain.cliente;
 
-import com.fatec.controle_financeiro.entities.ContasPagar;
 import org.springframework.data.jpa.repository.JpaRepository;
-public interface ClienteRepository extends JpaRepository<ContasPagar, Long> {
+
+import com.fatec.controle_financeiro.entities.Cliente;
+
+public interface ClienteRepository  extends JpaRepository<Cliente, Integer> {
 }

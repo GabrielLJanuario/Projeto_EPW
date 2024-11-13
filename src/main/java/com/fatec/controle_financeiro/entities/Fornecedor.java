@@ -8,31 +8,38 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "fornecedor")
-public class Fornecedor {
+@Table(name = "fornecedores")
+
+public class Fornecedor{
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int id;
 
     @Column(nullable = false, length = 60)
+
     private String nome;
 
-    // Getters e Setters
-    // id
+    public Fornecedor(){
+        
+    }
+
+    public Fornecedor(int id, String nome){
+        this.id = id;
+        this.nome = nome;
+    }
+    
     public int getId() {
         return id;
     }
-
-    public void setId(int id) { // Corrigido: o método deve aceitar um parâmetro
+    public void setId(int id) {
         this.id = id;
     }
-
-    // nome
     public String getNome() {
         return nome;
     }
-
-    public void setNome(String nome) { // Corrigido: o método deve aceitar um parâmetro
+    public void setNome(String nome) {
         this.nome = nome;
     }
 }

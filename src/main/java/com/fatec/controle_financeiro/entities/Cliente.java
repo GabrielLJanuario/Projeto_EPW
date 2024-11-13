@@ -1,35 +1,53 @@
 package com.fatec.controle_financeiro.entities;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "clientes")
 public class Cliente {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    
-    // Desabilitar quando quiser trabalhar com @Valid
-    //@NotBlank(message = "O nome não pode estar em branco.")
-    private String nome;
+
+    @Column(nullable = false, length = 60)
+    private String name;
 
     // Construtor padrão
     public Cliente() {
+
     }
 
-    public Cliente(int id, String nome) {
+    public Cliente(int id, String name) {
+
         this.id = id;
-        this.nome = nome;
+
+        this.name = name;
+
     }
 
     // Getters e Setters
-    public int getId() {
-        return id;
+
+    public int getId() { return id; }
+
+
+    public void setId(int id) { this.id = id; }
+
+
+    public String getName() {
+
+        return name;
+
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public void setName(String name) {
 
-    public String getNome() {
-        return nome;
-    }
+        this.name = name;
 
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 }
