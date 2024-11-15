@@ -7,6 +7,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.fatec.controle_financeiro.entities.Cliente;
+
 @Entity
 @Table(name = "clientes")
 public class Cliente {

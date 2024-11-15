@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fatec.controle_financeiro.Domain.Cliente.ClienteRepository;
 import com.fatec.controle_financeiro.entities.Cliente;
 
+
 @RequestMapping("/api/Cliente")
 @RestController
 
@@ -30,7 +31,7 @@ public class ClienteController {
     @Autowired
     private ClienteRepository clienteRepository;
  
-/*     private List<Cliente> clientes = new ArrayList<>();
+/*  private List<Cliente> clientes = new ArrayList<>();
     private int proximoId = 1; */
 
     @PostMapping("/CREATE")
