@@ -10,8 +10,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fatec.controle_financeiro.domain.cliente.ClienteRepository;
-import com.fatec.controle_financeiro.domain.contasreceber.ContasReceberRepository;
+import com.fatec.controle_financeiro.Domain.Cliente.ClienteRepository;
+import com.fatec.controle_financeiro.Domain.contasreceber.ContasReceberRepository;
 import com.fatec.controle_financeiro.entities.ContasReceber;
 
 import org.springframework.web.bind.annotation.PostMapping;

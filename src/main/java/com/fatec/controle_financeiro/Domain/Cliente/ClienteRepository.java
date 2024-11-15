@@ -1,4 +1,4 @@
-package com.fatec.controle_financeiro.domain.cliente;
+package com.fatec.controle_financeiro.Domain.Cliente;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

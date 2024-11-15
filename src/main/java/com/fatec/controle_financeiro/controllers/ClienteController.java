@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fatec.controle_financeiro.domain.cliente.ClienteRepository;
+import com.fatec.controle_financeiro.Domain.Cliente.ClienteRepository;
 import com.fatec.controle_financeiro.entities.Cliente;
 
 @RequestMapping("/api/Cliente")
